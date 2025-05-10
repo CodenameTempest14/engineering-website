@@ -1,0 +1,162 @@
+body {
+    background-image: url('../assets/background/background-BL.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-top: 150px;
+}
+
+.subContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px; 
+    width: 80%;
+    margin: 0 auto;
+}
+
+.ingredientsContainer{
+    margin-top: 20px;
+    border-radius: 50px;
+    width: 95%;
+    max-width: 550px;
+    height: auto auto;
+    margin: 0 auto;
+    background-color: rgba(255, 253, 230, 0.61);
+    border-radius: 30px;
+}
+
+.foodInMiddleContainer{
+    border-radius: 50px;
+    width: 95%;
+    max-width: 550px;
+    height: auto auto;
+    margin: 0 auto;
+    background-color: rgba(255, 253, 230, 0);
+    border-radius: 30px;
+}
+
+.instructionContainer{
+    border-radius: 50px;
+    width: 95%;
+    max-width: 550px;
+    height: auto auto;
+    margin: 0 auto;
+    background-color: rgba(255, 253, 230, 0.61);
+    border-radius: 30px;
+}
+
+.subtitle{
+    color: rgb(151, 48, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+.subtext{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+    font-size: 25px;
+}
+
+.foodName{
+    font-family: "Brush Script MT", cursive;
+    font-weight: bold;
+    font-size: 53px;
+    color: #ffdba5;
+}
+.food {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+.food img {
+    max-width: 100%;
+    height: auto;
+}
+.food img:active {
+    transform: rotate(360deg); 
+    transition: transform 1.2s;
+
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #ffdba5;
+    background-color: #007bff; 
+    border: 2px solid #4b1800; 
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; 
+    background-image: url('../assets/background/buttonBackground.jpg');
+}
+
+/* Hover effect for the button */
+.button:hover {
+    border-color:  #cf4200;
+}
+
+
+@media screen and (max-width: 1500px) {
+    .subtitle {
+        font-size: 35px;
+    }
+
+    .subtext {
+        font-size: 17px;
+    }
+
+    .foodContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .subtitle {
+        font-size: 30px;
+    }
+
+    .subtext {
+        font-size: 15px;
+    }
+
+    .foodContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .subtitle {
+        font-size: 15px;
+    }
+
+    .subtext {
+        font-size: 10px;
+    }
+
+    .foodContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .subtitle {
+        font-size: 10px;
+    }
+
+    .subtext {
+        font-size: 5px;
+    }
+
+    .subContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify - Castle on the Hill by Ed Sheeran</title>
+  <link rel="stylesheet" href="../../styles/Songs-Page.css">
+  <link rel="icon" href="../../assets/spotify-assets/icons/spotify-icon.svg" type="image/svg+xml">
+</head>
+
+<header>
+  <div class="left-section">
+    <img src="../../assets/spotify-assets/icons/Spotify_Primary_Logo_RGB_Black.png" alt="Spotify Logo">
+    <a href="../activity_6.html" class="home-icon"><img src="../../assets/spotify-assets/icons/homepage.png" alt="Home Icon"></a> 
+    <div class="search-bar">
+      <!--This part is just for design. It is all static-->
+      <img src="../../assets/spotify-assets/icons/search.png" alt="Search Icon">
+      <input type="text" placeholder="What do you want to play?">
+    </div>
+  </div>
+
+  <div class="right-section">
+    <button class="premiumBtn" onclick="window.location.href='https://open.spotify.com/premium'">Explore Premium</button>
+    <p class="user">MJ Butaya</p>
+    <div class="avatar">M</div>
+  </div>
+</header>
+
+<body>
+  <!--Change the background color depending on the song-->
+  <div class="lyrics-container" id="lyrics-container" style=" color: #6991a0; background-color: #AEC6CF;"></div>
+  <div class="player-container">
+    <div class="song-info">
+      <img src="../../assets/spotify-assets/song-profile/Castle-On-The-Hill-Ed-Sheeran.jpg" alt="Album Art" class="album-art" />
+      <div class="song-details">
+        <span class="song-title">Castle on the Hill</span>
+        <span class="song-artist">Ed Sheeran</span>
+      </div>
+    </div>
+
+    <div class="controls-container">
+      <div class="controls">
+        <button class="play-pause-btn" id="playPauseBtn">▶</button>
+      </div>
+      <div class="progress-container">
+        <span class="time-stamp" id="currentTime">0:00</span>
+        <input type="range" id="progressBar" value="0" min="0" step="1" />
+        <span class="time-stamp" id="totalTime">4:20</span>
+      </div>
+    </div>
+
+    <div class="volume-container">
+      <img src="../../assets/spotify-assets/icons/volume-up.png" alt="Volume" class="volume-icon" id="volumeIcon"/>
+      <input type="range" id="volumeControl" value="1" min="0" max="1" step="0.01" />
+    </div>
+  </div>
+  <audio id="audio" src="../../assets/spotify-assets/songs/Castle-On-the-Hill-Ed-Sheeran.mp3"></audio>
+
+  <script src="../../scripts/songs-scripts/EdSheeran.js"></script>
+</body>
+</html>

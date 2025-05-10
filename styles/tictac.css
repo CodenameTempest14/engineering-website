@@ -1,0 +1,100 @@
+/* Font import */
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+
+/* General styling */
+* {
+  font-family: "Press Start 2P", cursive;
+  user-select: none;
+  box-sizing: border-box; /* Ensure all elements include padding and border in the width/height */
+}
+
+body {
+  background: #1a1a1a; /* Dark background */
+  margin: 0; /* Remove default body margin */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Game container */
+.tabel {
+  width: 480px;
+  height: 480px;
+  background: #2b2b2b; /* Dark gray background */
+  border-radius: 20px;
+  border: 2px solid #000; /* Black border */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  display: flex;
+  flex-direction: column; /* Align children vertically */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+/* Game board */
+.board {
+  width: 90%;
+  height: 90%;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding: 20px;
+}
+
+/* Game cell */
+.board > span {
+  background: #3a3a3a; /* Dark gray background */
+  color: #fff;
+  font-size: 4em;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Hover effect */
+.board > span:hover {
+  background: #4a4a4a; /* Slightly darker gray on hover */
+}
+
+/* Click effect */
+.board > span:active {
+  transform: scale(0.95); /* Slight scale down on click */
+}
+
+/* Reset button */
+#reset {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #d9534f; /* Red background */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+  align-self: center; /* Center horizontally */
+}
+
+/* Reset button hover effect */
+#reset:hover {
+  background: #c9302c; /* Darker red on hover */
+}
+
+/* Win class */
+.win {
+  background: #f70000; /* Blue background for win indication */
+  animation: pulse 1s infinite alternate; /* Animation for highlighting */
+}
+
+/* Animation keyframes */
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 0px #ffffff00;
+  }
+  to {
+    box-shadow: 0 0 10px 5px rgb(255, 255, 255); /* Slightly larger shadow when highlighted */
+  }
+}                                         
+            
